@@ -1,5 +1,6 @@
 package Management;
 import java.util.HashMap;
+import java.util.Iterator;
 
 public class Orders{
     static HashMap<String, Device> devices = new HashMap<>();
@@ -64,5 +65,22 @@ public class Orders{
         }
     }
 
+    public static void addRule(String name, String time, String action) {
+        if (!devices.containsKey(name)) {
+            System.out.println("device not found");
+            return;
+        }
+        if (!action.equals("on") && !action.equals("off")) {
+            System.out.println("invalid action");
+            return;
+        }
+        String ruleKey = name + time;
+        if (rules.containsKey(ruleKey)) {
+            System.out.println("duplicate rule");
+            return;
+        }
+        rules.put(ruleKey, new Rule(name, time, action));
+        System.out.println("rule added successfully");
+    }
 
 }

@@ -24,7 +24,7 @@ public class Main {
                         Orders.listDevices();
                         break;
                     case "add_rule":
-                        addRule(parts[1], parts[2], parts[3]);
+                        Orders.addRule(parts[1], parts[2], parts[3]);
                         break;
                     case "check_rules":
                         checkRules(parts[1]);
