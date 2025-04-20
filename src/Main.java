@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import Management.*;
+import Management.Orders;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,10 +12,10 @@ public class Main {
             try{
                 switch (parts[0]) {
                     case "add_device":
-                        addDevice(parts[1], parts[2], parts[3]);
+                        Orders.addDevice(parts[1], parts[2], parts[3]);
                         break;
                     case "set_device":
-                        setDevice(parts[1], parts[2], parts[3]);
+                        Orders.setDevice(parts[1], parts[2], parts[3]);
                         break;
                     case "remove_device":
                         removeDevice(parts[1]);
