@@ -18,10 +18,10 @@ public class Main {
                         Orders.setDevice(parts[1], parts[2], parts[3]);
                         break;
                     case "remove_device":
-                        removeDevice(parts[1]);
+                        Orders.removeDevice(parts[1]);
                         break;
                     case "list_devices":
-                        listDevices();
+                        Orders.listDevices();
                         break;
                     case "add_rule":
                         addRule(parts[1], parts[2], parts[3]);

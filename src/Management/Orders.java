@@ -43,4 +43,26 @@ public class Orders{
     }
 
 
+
+    public static void removeDevice(String name) {
+        if (!devices.containsKey(name)) {
+            System.out.println("device not found");
+            return;
+        }
+        devices.remove(name);
+        rules.values().removeIf(rule -> rule.name.equals(name));
+        System.out.println("device removed successfully");
+    }
+
+    public static void listDevices() {
+        if (devices.isEmpty()) {
+            System.out.println();
+            return;
+        }
+        for (Device device : devices.values()) {
+            System.out.println(device.getStatus());
+        }
+    }
+
+
 }
