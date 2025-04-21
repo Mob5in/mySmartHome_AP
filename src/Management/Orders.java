@@ -79,11 +79,17 @@ public class Orders{
             System.out.println("duplicate rule");
             return;
         }
+
+        if (!isValidTime(time)) {
+            System.out.println("invalid time");
+            return;
+        }
+
         rules.put(ruleKey, new Rule(name, time, action));
         System.out.println("rule added successfully");
     }
 
-    private boolean isValidTime(String time) {
+    private static boolean isValidTime(String time) {
         try {
             String[] parts = time.split(":");
             int hour = Integer.parseInt(parts[0]);
