@@ -83,4 +83,14 @@ public class Orders{
         System.out.println("rule added successfully");
     }
 
+    private boolean isValidTime(String time) {
+        try {
+            String[] parts = time.split(":");
+            int hour = Integer.parseInt(parts[0]);
+            int minute = Integer.parseInt(parts[1]);
+            return hour >= 0 && hour < 24 && minute >= 0 && minute < 60;
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }
