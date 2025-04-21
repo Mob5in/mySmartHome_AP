@@ -99,4 +99,22 @@ public class Orders{
             return false;
         }
     }
+
+    public static void check_rules(String time){
+        if(!isValidTime(time)){
+            System.out.println("Invalid time");
+            return;
+        }
+
+        for(Rule rule: rules.values()){
+            if(rule.time.equals(time)){
+                devices.get(rule.name).setProperty("stauts", rule.action);
+            }
+        }
+        System.out.println("rules checked");
+
+    }
+
+
+
 }
