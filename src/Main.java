@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int q = scn.nextInt();
-        for(int i = 0; i < q ; i++){
+        for(int i = 0; i < q+1 ; ++i){
             String command = scn.nextLine();
             String[] parts = command.split(" ");
             try{
