@@ -11,7 +11,22 @@ public class Light extends Device {
 
     @Override
     public void setProperty(String property, String value) {
-
+            if(property.equals("status")){
+                if(value.equals("on") || value.equals("off")){
+                    this.status = value;
+                }else{
+                    throw new IllegalArgumentException("this value is not acceptable");
+                }
+            } else if (property.equals("brightness")) {
+                int brightnessValue = Integer.parseInt(value);
+                if( (brightnessValue<=100) && (brightnessValue>=0)) {
+                    this.brightness = brightnessValue;
+                }else{
+                    throw new IllegalArgumentException("this value is not acceptable");
+                }
+            }else {
+                throw new IllegalArgumentException("Invalid properrty");
+            }
     }
 
     @Override
