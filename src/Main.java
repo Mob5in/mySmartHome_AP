@@ -27,10 +27,10 @@ public class Main {
                         Orders.addRule(parts[1], parts[2], parts[3]);
                         break;
                     case "check_rules":
-                        checkRules(parts[1]);
+                        Orders.check_rules(parts[1]);
                         break;
                     case "list_rules":
-                        listRules();
+                        Orders.listRules();
                         break;
                 }
             }catch (Exception e){

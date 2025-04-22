@@ -115,6 +115,14 @@ public class Orders{
 
     }
 
-
+    public static void listRules() {
+        if (rules.isEmpty()) {
+            System.out.println();
+            return;
+        }
+        for (Rule rule : rules.values()) {
+            System.out.println(rule.name + " " + rule.time + " " + rule.action);
+        }
+    }
 
 }
