@@ -16,7 +16,7 @@ public class Light extends Device {
 
     @Override
     public String getStatus() {
-        return "";
+        return String.format("light: %s %s %d%% %s", name, status, brightness, protocol);
     }
 
 }
