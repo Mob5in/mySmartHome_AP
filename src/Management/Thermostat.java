@@ -17,6 +17,6 @@ public class Thermostat extends Device{
 
     @Override
     public String getStatus() {
-        return "";
+        return String.format("Thermostat: %s %s %d%% %s", name, status, brightness, protocol);
     }
 }
